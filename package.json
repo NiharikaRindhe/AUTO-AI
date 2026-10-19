@@ -1,0 +1,25 @@
+{
+  "name": "autoai-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "dev:all": "node scripts/dev.mjs",
+    "voice:setup": ".venv\\Scripts\\python.exe scripts/setup_voice.py",
+    "rag:setup": ".venv\\Scripts\\python.exe -m scripts.setup_rag",
+    "voice:server": ".venv\\Scripts\\python.exe -m uvicorn backend.app:app --host 127.0.0.1 --port 8000 --no-access-log",
+    "test:voice": ".venv\\Scripts\\python.exe -m unittest discover -s backend/tests -v",
+    "test:frontend": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

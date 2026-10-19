@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vite/
+.cache/
+*.log
+.venv/
+voice-assets/
+rag-assets/
+local-data/
+__pycache__/
+*.pyc
+.pytest_cache/
+~$*
